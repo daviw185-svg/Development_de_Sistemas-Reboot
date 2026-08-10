@@ -1,0 +1,1 @@
+// method="post" -> esconder as informações do usuário da página no Web "novaLidate"->Preenxhimento automático das informações para logar(email e senha)
