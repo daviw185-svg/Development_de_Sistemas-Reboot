@@ -1,4 +1,3 @@
-# Definição 
+# Definição de API
 
-- Um bloco de código pronto, como o sistema de mapa para serviços de aplicativos(Uber, Ifood), ou de sistema de loja online (forma de pagament, sistema de carrinho)
-
+- Bloco de cógio pronto para sistemas, como sistema de mapa para aplicativos, de lojas onlines, etc.

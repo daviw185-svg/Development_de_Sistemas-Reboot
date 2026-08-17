@@ -1,0 +1,1 @@
+const btnBuscar = document.getElementById('buscar');
