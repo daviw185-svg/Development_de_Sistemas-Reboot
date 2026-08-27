@@ -1,10 +1,18 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware # Conectar o back-end com o front-end
 
 # Criar a iastâncide da Aplicaçãso
 app = FastAPI(
     title='API de Cadatro -- SENAI',
     description='Primeira API do curso de DS',
     version='0.1.0'
+)
+
+app.add_middleware(
+     CORSMiddleware,
+     allow_origins=['*'], # Em produção, especificar o domínio(o link) do front
+     allow_methods=['*'],
+     allow_headers=['*'],
 )
 
 #Rota raiz - GET/
