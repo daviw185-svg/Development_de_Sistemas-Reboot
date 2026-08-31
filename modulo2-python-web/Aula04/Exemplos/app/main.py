@@ -102,24 +102,18 @@ def criar_usuario(dados: Usuario):
 # PUT - Substitui o usuário inteiro
 @app.put('/usuarios/{usuario_id}', response_model=UsuarioResposta)
 def atualizar_usuario(usuario_id: int, dados: Usuario):
-    for inpuut, user in enumerate(usuarios_db):
-        if user.id == usuario_id:
+    for i, u in enumerate(usuarios_db):
+        if u.id == usuario_id:
             atualizado = UsuarioResposta(id=usuario_id, **dados.model_dump())
-            usuarios_db[inpuut] = atualizado
+            usuarios_db[i] = atualizado
             return atualizado
     raise HTTPException(404, 'Usuário não encontrado') 
 
 # DELETE - Deleta um usuário
 @app.delete('/usuarios/{usuarios_id}', status_code=204)
 def deletar_usuario(usuario_id: int):
-    for inpuut, u in enumerate(usuarios_db):
+    for i, u in enumerate(usuarios_db):
         if u.id == usuario_id:
             usuarios_db.pop(i)
             return Response(status_code=204)
     raise HTTPException(404, 'Usuário não encontrado')
-
-
-
-
-
-
